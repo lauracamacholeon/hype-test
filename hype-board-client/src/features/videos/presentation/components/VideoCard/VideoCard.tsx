@@ -5,7 +5,13 @@ const VideoCard = ({ video }: VideoCardProps) => {
   return (
     <article className={styles.card}>
       <div className={styles.thumbnail}>
-        <img src={video.thumbnail} alt={video.title} />
+        <img
+          src={video.thumbnail}
+          alt={video.title}
+          onError={(e) => {
+            e.currentTarget.src = video.thumbnailAlt;
+          }}
+        />
         <span className={styles.hype}>⚡ {video.hype.toFixed(3)}</span>
       </div>
       <div className={styles.content}>

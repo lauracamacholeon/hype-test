@@ -5,6 +5,7 @@ export interface ErrorMessageProps {
 export interface Video {
   id: string;
   thumbnail: string;
+  thumbnailAlt: string;
   title: string;
   author: string;
   publishedAt: string;
