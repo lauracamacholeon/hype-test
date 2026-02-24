@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, InternalServerErrorException } from '@nestjs/common';
 import { GetVideosUseCase } from '../application/get-videos.usecase';
 import { Video } from '../domain/video.entity';
 
@@ -8,6 +8,10 @@ export class VideosController {
 
   @Get()
   async getVideos(): Promise<Video[]> {
-    return this.getVideosUseCase.execute();
+    try {
+      return await this.getVideosUseCase.execute();
+    } catch {
+      throw new InternalServerErrorException('Something went wrong');
+    }
   }
 }
