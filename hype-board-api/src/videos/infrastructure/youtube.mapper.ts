@@ -1,16 +1,21 @@
 import { Video } from '../domain/video.entity';
-import { YoutubeVideoRawDto } from './dto/youtube-video-raw.dto';
+import type { YoutubeVideoRawDto } from './dto/youtube-video-raw.dto';
 
 export class YoutubeMapper {
   static toDomain(raw: YoutubeVideoRawDto): Video {
     return new Video(
       raw.id,
       raw.snippet.thumbnails.high.url,
+      YoutubeMapper.buildAltThumbnail(raw.snippet.thumbnails.high.url),
       raw.snippet.title,
       raw.snippet.channelTitle,
       YoutubeMapper.getRelativeTime(raw.snippet.publishedAt),
       YoutubeMapper.calculateHype(raw),
     );
+  }
+
+  private static buildAltThumbnail(originalUrl: string): string {
+    return originalUrl.replace('via.placeholder.com', 'placehold.co');
   }
 
   private static calculateHype(raw: YoutubeVideoRawDto): number {
