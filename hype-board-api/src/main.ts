@@ -12,6 +12,6 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   await app.listen(3000);
-  console.log('🚀 hype-board-api running on http://localhost:3000');
+  console.log('hype-board-api running on http://localhost:3000');
 }
 void bootstrap();
