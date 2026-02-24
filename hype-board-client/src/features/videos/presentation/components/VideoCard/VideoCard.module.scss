@@ -1,0 +1,72 @@
+@use '@/shared/styles/variables' as *;
+
+.card {
+  background-color: $color-surface;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  transition: $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    background-color: $color-surface-hover;
+  }
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition-base;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.hype {
+  position: absolute;
+  bottom: $spacing-sm;
+  right: $spacing-sm;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $color-crown;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
+}
+
+.content {
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  color: $color-text-primary;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.author {
+  font-size: $font-size-md;
+  color: $color-primary;
+  font-weight: 500;
+}
+
+.date {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}

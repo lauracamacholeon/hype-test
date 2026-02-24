@@ -1,11 +1,16 @@
+import { Suspense, lazy } from 'react';
+import Spinner from '@/shared/components/Spinner/Spinner';
+
+const VideosPage = lazy(
+  () => import('@/features/videos/presentation/pages/VideosPage'),
+);
 
 function App() {
-
   return (
-    <>
-      hola
-    </>
-  )
+    <Suspense fallback={<Spinner />}>
+      <VideosPage />
+    </Suspense>
+  );
 }
 
-export default App
+export default App;
