@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { Video } from "../domain/video.model";
+import type { Video } from "@/shared/types";
 import { fetchVideos } from "../infrastructure/video.service";
 
 interface UseVideosState {

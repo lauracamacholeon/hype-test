@@ -1,4 +1,4 @@
-import type { Video } from "../domain/video.model";
+import type { Video } from "@/shared/types";
 
 const API_URL = import.meta.env.VITE_API_URL as string;
 

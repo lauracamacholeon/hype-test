@@ -1,3 +1,7 @@
+export interface ErrorMessageProps {
+  message: string;
+}
+
 export interface Video {
   id: string;
   thumbnail: string;
