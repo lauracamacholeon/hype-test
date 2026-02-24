@@ -1,6 +1,6 @@
 import type { Video } from "../domain/video.model";
 
-const API_URL = "http://localhost:3000/api/videos";
+const API_URL = import.meta.env.VITE_API_URL as string;
 
 export const fetchVideos = async (): Promise<Video[]> => {
   const response = await fetch(API_URL);
