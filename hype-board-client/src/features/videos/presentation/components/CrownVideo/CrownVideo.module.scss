@@ -25,10 +25,17 @@
   gap: $spacing-sm;
   background-color: $color-crown;
   color: #000;
-  font-size: $font-size-md;
   font-weight: 700;
   padding: $spacing-sm $spacing-lg;
   border-radius: 0 0 $border-radius-md 0;
+
+  .icon{
+    font-size: $font-size-4xl;
+  }
+
+  .textBadge{
+    font-size: $font-size-lg;
+  }
 }
 
 .inner {

@@ -5,8 +5,8 @@ const CrownVideo = ({ video }: CrownVideoProps) => {
   return (
     <article className={styles.crown}>
       <div className={styles.badge}>
-        <span>👑</span>
-        <span>Joya de la Corona</span>
+        <span className={styles.icon}>👑</span>
+        <span className={styles.textBadge}>Joya de la Corona</span>
       </div>
       <div className={styles.inner}>
         <div className={styles.thumbnail}>

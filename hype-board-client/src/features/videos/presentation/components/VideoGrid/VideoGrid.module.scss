@@ -7,9 +7,10 @@
 }
 
 .title {
-  font-size: $font-size-2xl;
   font-weight: 700;
+  letter-spacing: $spacing-xs;
   color: $color-text-primary;
+  margin: $spacing-2xl 0;
 }
 
 .grid {
