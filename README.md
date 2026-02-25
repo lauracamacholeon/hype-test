@@ -146,6 +146,6 @@ src/
 
 ## Security (Backend)
 
-- Rate limiting: 10 requests per minute per client
+- Rate limiting: 50 requests per minute per client
 - Helmet: HTTP security headers enabled
 - CORS: Restricted to `http://localhost:5173`
