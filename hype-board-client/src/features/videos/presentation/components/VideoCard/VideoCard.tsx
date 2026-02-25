@@ -1,4 +1,5 @@
 import type { VideoCardProps } from '@/shared/types';
+import { capitalize } from '@/shared/utils/string.utils';
 import styles from './VideoCard.module.scss';
 
 const VideoCard = ({ video }: VideoCardProps) => {
@@ -15,8 +16,8 @@ const VideoCard = ({ video }: VideoCardProps) => {
         <span className={styles.hype}>⚡ {video.hype.toFixed(3)}</span>
       </div>
       <div className={styles.content}>
-        <h3 className={styles.title}>{video.title}</h3>
-        <p className={styles.author}>{video.author}</p>
+        <h3 className={styles.title}>{capitalize(video.title)}</h3>
+        <p className={styles.author}>{capitalize(video.author)}</p>
         <p className={styles.date}>{video.publishedAt}</p>
       </div>
     </article>
