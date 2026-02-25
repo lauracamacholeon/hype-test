@@ -1,0 +1,22 @@
+@use '@/shared/styles/variables' as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl;
+  padding: $spacing-xl $spacing-md;
+  margin-top: $spacing-2xl;
+  border-top: 1px solid $color-text-secondary;
+  text-align: center;
+}
+
+.logo {
+  width: 30%;
+  height: auto;
+  filter: brightness(100);
+}
+
+.text {
+  color: $color-text-secondary;
+}

@@ -3,6 +3,7 @@ import CrownVideo from '../components/CrownVideo/CrownVideo';
 import VideoGrid from '../components/VideoGrid/VideoGrid';
 import Spinner from '@/shared/components/Spinner/Spinner';
 import ErrorMessage from '@/shared/components/ErrorMessage/ErrorMessage';
+import Footer from '@/shared/components/Footer/Footer';
 import styles from './VideosPage.module.scss';
 import logo from '@/assets/sundevs.svg';
 
@@ -24,6 +25,7 @@ const VideosPage = () => {
       {crownVideo && <CrownVideo video={crownVideo} />}
 
       <VideoGrid videos={videos} />
+      <Footer />
     </main>
   );
 };
