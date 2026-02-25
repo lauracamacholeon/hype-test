@@ -13,13 +13,19 @@
 .header {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: $spacing-sm;
   margin-bottom: $spacing-2xl;
   text-align: center;
 }
 
+.logo {
+  width: 50%;
+  height: auto;
+  filter: brightness(100);
+}
+
 .heading {
-  font-size: 2.5rem;
   font-weight: 700;
   color: $color-text-primary;
 
@@ -29,6 +35,9 @@
 }
 
 .subheading {
-  font-size: $font-size-lg;
+  margin-top: 50px;
   color: $color-text-secondary;
+  // font-weight: normal;
+  letter-spacing: 2.5px;
+  
 }
