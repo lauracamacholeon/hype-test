@@ -6,7 +6,7 @@ const ErrorMessage = ({ message }: ErrorMessageProps) => {
   return (
     <div className={styles.wrapper}>
       <span className={styles.icon}>⚠️</span>
-      <h2 className={styles.title}>UPS Algo salio mal  ...!!!</h2>
+      <h2 className={styles.title}>UPS Algo salio mal...!!!</h2>
       <p className={styles.message}>{message}</p>
     </div>
   );
