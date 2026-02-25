@@ -3,6 +3,7 @@
 .card {
   background-color: $color-surface;
   border-radius: $border-radius-md;
+  border: $spacing-xs solid rgba(0,212,255,.15);
   overflow: hidden;
   transition: $transition-base;
   cursor: pointer;
