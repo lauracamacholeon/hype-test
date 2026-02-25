@@ -79,6 +79,17 @@ http://localhost:5173
 
 ## API Endpoints
 
+## Thumbnail Fallback Strategy
+
+The API response includes two thumbnail properties per video:
+
+| Property       | Description                                         |
+| -------------- | --------------------------------------------------- |
+| `thumbnail`    | Original URL from the YouTube mock data             |
+| `thumbnailAlt` | Fallback URL using `placehold.co` as image provider |
+
+The frontend attempts to load `thumbnail` first. If the image fails to load, it automatically switches to `thumbnailAlt`. This was added because the original mock data uses `via.placeholder.com` which is no longer available.
+
 ### GET /api/videos
 
 Returns a list of videos sorted by hype level in descending order.
