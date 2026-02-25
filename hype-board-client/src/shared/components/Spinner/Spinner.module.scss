@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: $spacing-md;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .spinner {
@@ -20,7 +20,7 @@
 
 .text {
   color: $color-text-secondary;
-  font-size: $font-size-md;
+  letter-spacing: $spacing-sm;
 }
 
 @keyframes spin {

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: $spacing-md;
-  min-height: 60vh;
+  min-height: 100vh;
   text-align: center;
   padding: $spacing-xl;
 }
@@ -19,6 +19,7 @@
   font-size: $font-size-2xl;
   font-weight: 700;
   color: $color-error;
+  letter-spacing: $spacing-sm;
 }
 
 .message {
